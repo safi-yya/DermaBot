@@ -1,33 +1,50 @@
-<!-- In HTML Comments are written like this -->
-<!-- They can all be removed for your apps -->
-<!doctype html> <!-- This first line tells browsers to expect modern standard html 5 -->
-<html lang="en-gb"> <!-- This is indicates the page is written in British English, useful for accessibility -->
-<meta charset="utf-8"> <!-- This indicates how the file is encoded. utf-8 is standard -->
-<title>Plunder Pop!</title> <!-- All pages need a title, this will be displayed in the browser's title bar -->
-<link rel="stylesheet" href="default.css"> <!-- Import style sheet – default.css -->
-<link rel="icon" href="./assets/favicon.png"> <!-- Import 'Favorites Icon' – favicon.png -->
-<script type="module" src="main.js"></script> <!-- Load the main script. Must be type="module". Have only one of these -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skincare Routine Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌿 My Skincare Routine</h1>
+  </header>
 
-<header tabindex="-1">
-    <h1 id="title">Plunder Pop!</h1>
-    <a href="/docs/">API Documentation</a>
-</header>
+  <section class="routine-toggle">
+    <button class="active">Morning</button>
+    <button>Evening</button>
+  </section>
 
-<aside id="home_player" class="sidebar">
-  Player 1
-  <div id="score-display1">Score: 0</div>
+  <section class="alert-banner">
+    ⚠️ Retinol will run out in 3 days!
+  </section>
 
-</aside>
-
-<aside id="away_player" class="sidebar">
-  Player 2
-  <div id="score-display2">Score: 0</div>
-</aside>
-
-<main>
-    <div class="grid-container">
-        <table id="grid">
-            
-        </table>
+  <section class="routine-grid">
+    <div class="product-card">
+      <h2>Cleanser</h2>
+      <p>Use before serum</p>
+      <span class="step">Step 1</span>
+      <button>Mark as Used</button>
     </div>
-</main>
+
+    <div class="product-card warning">
+      <h2>Retinol 0.5%</h2>
+      <p>Use once every 3 days</p>
+      <span class="step">Step 3</span>
+      <button>Mark as Used</button>
+    </div>
+
+    <div class="product-card">
+      <h2>Moisturizer</h2>
+      <p>Seal in hydration</p>
+      <span class="step">Step 4</span>
+      <button>Mark as Used</button>
+    </div>
+  </section>
+
+  <footer>
+    <button class="add-button">+ Add Product</button>
+  </footer>
+</body>
+</html>

@@ -1,127 +1,112 @@
-:root
-{
-    --header-bar-height: 96px;
-    --header-font-size: 40pt;
-    --sidebar-width: 250px;
-    --border-width: 2px;
-    --border-colour: white;
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e2efff;
+  color: #333;
+  padding: 20px;
 }
 
-@font-face
-{
-    font-family: "Pirate";
-    src: url("./assets/JackPiratePersonalUseOnly-OVGJP.ttf");
-}
-
-body
-{
-    background-color: rgb(239, 255, 22);
-}
-
-main
-{
-    background-color: rgb(181 201 218);
-
-    position: absolute;
-    left: var(--sidebar-width);
-    right: var(--sidebar-width);
-    top: var(--header-bar-height);
-    height: calc(100% - var(--header-bar-height));
-    width: calc(100% - 2 * var(--sidebar-width));
-
-    display: flex;              /* enable flexbox */
-    justify-content: center;    /* center horizontally */
-    align-items: center;        /* center vertically */
-}
-
-aside {
-    background-color: rgb(119 98 88);
-    position: absolute;
-    width: var(--sidebar-width);
-    top: var(--header-bar-height);
-    height: calc(100% - var(--header-bar-height));
-    padding-top: 1rem;
-}
-
-#home_player {
-  left: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16pt;
-  font-weight: bold;
-  text-align: center;
-}
-
-#away_player {
-  right: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16pt;
-  font-weight: bold;
-  text-align: center;
-}
-
-
+/* Header */
 header {
-    background-color: rgb(64 89 173);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-bar-height);
-
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
+  text-align: center;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 2rem;
+  color: #2a2a2a;
 }
 
-h1
-{
-    font-size: var(--header-font-size);
-    color: rgb(255 248 240);
-    font-family: "Pirate";
-    text-align: center;
-    position: absolute;
+/* Toggle Buttons */
+.routine-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.routine-toggle button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.routine-toggle .active {
+  background-color: #a0c4ff;
+  color: #fff;
 }
 
-header a
-{
-    color: var(--sidebar-colour);
-    position: absolute;
-    right: 1em;
-    color: rgb(255 248 240);
+/* Alert Banner */
+.alert-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-left: 4px solid #ffcc00;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-weight: 500;
 }
 
-.grid-container
-{
-    background-color: rgb(181 201 218);
-    aspect-ratio: 1;
-    max-height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100%;
-    max-width: 100%;
+/* Product Grid */
+.routine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
-table
-{
-    border-collapse: collapse;
-    width: 90vmin;
-    height: 100%;
-    aspect-ratio: 1/1;
-    line-height: 0;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 100%;
-    max-width: 100%;
-    position: relative;
+/* Product Card */
+.product-card {
+  background: white;
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
-
-td
-{
-    border: 1px solid rgb(255 248 240);
+.product-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
 }
-
-.selected {
-  outline: 3px solid gold;
-  box-shadow: 0 0 10px gold;
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+.product-card .step {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  background: #eee;
+  padding: 3px 6px;
   border-radius: 6px;
+}
+.product-card button {
+  padding: 8px 14px;
+  background-color: #d0f0c0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.product-card.warning {
+  border: 2px solid #ff6b6b;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+}
+.add-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #8ecae6;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }

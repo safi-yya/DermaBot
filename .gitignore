@@ -1,2 +1,11 @@
 node_modules
 .directory
+.mocharc.json
+jsdoc.json
+package-lock.json
+venv
+*__pycache__
+.env
+.pytest_cache
+
+dev

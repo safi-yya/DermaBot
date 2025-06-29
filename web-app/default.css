@@ -15,12 +15,17 @@ body {
 header {
   text-align: center;
   margin-bottom: 20px;
+
 }
+
+main {
+    background-color: #ffffff
+}
+
 h1 {
   font-size: 2rem;
   color: #2a2a2a;
 }
-
 /* Toggle Buttons */
 .routine-toggle {
   display: flex;
@@ -71,6 +76,11 @@ h1 {
   font-size: 1.2rem;
   margin-bottom: 6px;
 }
+.product-card h3 {
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: rgb(0, 76, 139)
+}
 .product-card p {
   font-size: 0.95rem;
   color: #555;
@@ -93,7 +103,7 @@ h1 {
   cursor: pointer;
 }
 .product-card.warning {
-  border: 2px solid #ff6b6b;
+  border: 2px solid #ffc96b;
 }
 
 /* Footer */
